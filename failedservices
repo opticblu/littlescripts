@@ -1,0 +1,21 @@
+#!/bin/bash        
+
+RED=$(tput setaf 1)
+RESET=$(tput sgr0)
+
+ # Check for failed systemd services            
+ count_failed=$(systemctl --failed --no-legend --plain | wc -l)                                                
+                                                                        
+#If there are no failed services, output message and quit                                                     
+ if [ $count_failed -eq 0 ]; then                                                                              
+   echo "No services in failed state"                                                                          
+   exit 1                                                                                                      
+ else                                                                                                          
+                                                               
+# Output the list of failed services                                                                        
+   echo -e "${RED}$(systemctl --failed --no-legend --plain | awk '{print $1}')${RESET} in FAILED STATE"        
+ # uncomment the following for a count of failed services lol
+ # echo -e "Count of failed services: ${RED}$count_failed${RESET}"                                             
+   exit 0                                                                                                      
+                                                               
+ fi
