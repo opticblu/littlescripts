@@ -13,3 +13,8 @@ Advice irrespective of license: don't use these for anything important unless yo
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
 
   0. You just DO WHAT THE FUCK YOU WANT TO.
+
+
+
+
+^^ disregard the name change part, don't care, nobody will ever see this
