@@ -1,0 +1,3 @@
+# one command for fastfetch ASN output, needs geoip/geoiplookup package
+
+curl -s -4 ifconfig.co | xargs geoiplookup | sed '1d;2d' | sed 's/GeoIP ASNum Edition: //g'
