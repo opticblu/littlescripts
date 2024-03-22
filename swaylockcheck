@@ -1,0 +1,15 @@
+#!/bin/bash                                                                                                   
+                                  
+ # Check if swaylock running, pgrep for them Sun fellows
+                                            
+ if ! pgrep -x "swaylock-plugin" > /dev/null; then                                                             
+                                                   
+     # If swaylock is not running, start it                                                                    
+                                            
+     loginctl lock-session && sleep 5 & hyprctl dispatch dpms off                                              
+                                                                                               
+ else                                                                                                          
+                                            
+     echo "lockscreen is already running."                                                                       
+                                            
+ fi
