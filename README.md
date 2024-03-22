@@ -1,4 +1,4 @@
-Advice irrespective of license: don't use these for anything important unless you're a pond duck like me
+Advice irrespective of license: don't use these for anything important unless you're a pond duck like me 🦆
 
         DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
                     Version 2, December 2004 
