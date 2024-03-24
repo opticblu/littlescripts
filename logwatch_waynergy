@@ -1,0 +1,17 @@
+#!/bin/bash
+LOG_FILE="/tmp/waynergy.log"
+MATCH_PATTERN="trying to reconnect in a second"
+ 
+ tail -Fn0 "$LOG_FILE"
+ while read line; do
+ 
+     echo "$line" | grep -q "$MATCH_PATTERN"
+ 
+     if [ $? -eq 0 ]; then
+ 
+         echo "Pattern found, restarting waynergy service..."
+         sleep 2
+         systemctl --user restart waynergy.service
+     fi
+ 
+ done
